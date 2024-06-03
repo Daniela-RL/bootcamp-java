@@ -1,16 +1,18 @@
 public class Gerentes extends Empleados{
     private long id;
 
-    private double bono;
-    private  double precio;
+    private int bono;
+    private  int salarioBase;
 
-    public Gerentes(long id, String nombre, String email) {
-        super(id, nombre, email);
+    public Gerentes(long id, String nombre, String email, int bono, int salarioBase) {
+        super(id, nombre,email);
+        this.bono = bono;
+        this.salarioBase = salarioBase;
+
     }
-    public void calcularSalario(double salarioBase){
-        double bono = 2200;
-        double salario =  salarioBase + bono / 12;
-        System.out.println(" salario es: "+ salario);
+    public int calcularSalario(){
+        int salario =  salarioBase + bono ;
+        return salario;
 
     }
 }

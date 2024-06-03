@@ -3,8 +3,10 @@ public class Empleados {
     private String nombre;
     private String email;
 
-    public Empleados() {
-
+    public Empleados(long id, String nombre, String email) {
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
     }
 
     public long getId() {
@@ -31,21 +33,16 @@ public class Empleados {
         this.email = email;
     }
 
-    public Empleados(long id, String nombre, String email) {
-        this.id = id;
-        this.nombre = nombre;
-        this.email = email;
-    }
+
 
     public void descricion(){
         System.out.println("Descripcion empleados:");
 
     }
 
-    public void calcularSalario(double horas){
-        double precioHora = 15;
-        double salario =  horas * precioHora;
-        System.out.println(" salario es: "+ salario);
+    public int calcularSalario(int horas, int precioHoras){
+        int salario =  horas * precioHoras;
+        return salario;
 
     }
 }

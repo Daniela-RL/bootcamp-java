@@ -1,15 +1,16 @@
 public class Ingenieros extends Empleados{
     private long id;
     private int horas;
+    private int precioHoras;
 
-    public Ingenieros(long id, String nombre, String email) {
+    public Ingenieros(long id, String nombre, String email, int horas, int precioHoras) {
         super(id, nombre, email);
+        this.horas = horas;
+        this.precioHoras = precioHoras;
     }
 
-    public void calcularSalario(int horas){
-        double precioHora = 18;
-        double salario =  horas * precioHora;
-        System.out.println(" salario es: "+ salario);
-
+    public int calcularSalario(int horas, int precioHoras){
+        int salario =  horas * precioHoras;
+       return salario;
     }
 }
