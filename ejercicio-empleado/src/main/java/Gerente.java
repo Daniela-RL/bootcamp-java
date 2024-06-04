@@ -1,14 +1,26 @@
 public class Gerente extends Empleado {
-    private long id;
+    private static final double salarioBase = 30000;
+    private  double bono;
 
-    private int bono;
-    private  int salarioBase;
-
-    public Gerente(long idEmpleado, String nombre, String email, long id, int bono, int salarioBase){
-        super(idEmpleado, nombre, email);
-        this.id = id;
+    public Gerente(String id, String nombre, String email, double bono){
+        super(id, nombre, email);
         this.bono = bono;
-        this.salarioBase = salarioBase;
     }
+
+    @Override
+    public double calcularSalario(){
+        return salarioBase + bono;
+    }
+
+    @Override
+    public void descripcion() {
+        System.out.println("Gerente: ");
+        super.descripcion();
+    }
+
+
+
+
+
 
 }
